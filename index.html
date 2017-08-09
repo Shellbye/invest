@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>INVES Design官网</title>
+	<link type="text/css" href="./css/main.css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<div class="logo"></div>
+			<div class="menu"></div>
+		</div>
+		<div class="banner">
+		</div>
+	</div>
+	<div class="introduce">
+		<h1>我们是产品与品牌设计咨询专家</h1>
+		<p class="detail">我们为各种不同客户重塑他们的产品体验设计；我们提供可转变商业价值的产品设计策略；我们为品牌注入设计活力，使其极具品牌价值；我们为每位客户提供专家式设计咨询服务。</p>
+	</div>
+	<div class="services">
+		<ul class="clearfix">
+			<li class="service-item">
+				<div class="service-icon service-product"></div>
+				<h2>产品咨询</h2>
+				<p>Product Consulting</p>
+			</li>
+			<li class="service-item">
+				<div class="service-icon service-brand"></div>
+				<h2>品牌设计</h2>
+				<p>Branding Design</p>
+			</li>
+			<li class="service-item">
+				<div class="service-icon service-interaction"></div>
+				<h2>交互与视觉</h2>
+				<p>Interaction and Visual</p>
+			</li>						
+		</ul>	
+	</div>
+	<div class="case-box clearfix">
+		<div class="case-item case-yuepaoquan">
+			<div class="case-logo case-yuepaoquan-logo"></div>
+		</div>
+		<div class="case-item case-maxthon">
+			<div class="case-logo case-maxthon-logo"></div>
+		</div>
+		<div class="case-item case-qiku">
+			<div class="case-logo case-qiku-logo"></div>
+		</div>
+		<div class="case-item case-quankepai">
+			<div class="case-logo case-quankepai-logo"></div>
+		</div>
+	</div>
+	<div class="logo-box clearfix">
+		<div class="logo-items clearfix">
+			<div class="logo-item logo-360"></div>
+			<div class="logo-item logo-alibaba"></div>
+			<div class="logo-item logo-baidu"></div>
+			<div class="logo-item logo-baofeng"></div>			
+		</div>
+		<div class="logo-items clearfix">
+			<div class="logo-item logo-haier"></div>
+			<div class="logo-item logo-jd"></div>
+			<div class="logo-item logo-meizu"></div>
+			<div class="logo-item logo-yidong"></div>			
+		</div>
+		<div class="logo-items clearfix">
+			<div class="logo-item logo-huawei"></div>
+			<div class="logo-item logo-xindongfang"></div>
+			<div class="logo-item logo-miaozhen"></div>
+			<div class="logo-item logo-uber"></div>			
+		</div>				
+	</div>
+	<p class="start-text">现在开始，由我们来为您设计产品</p>
+	<div class="contact">
+	</div>
+	<script type="text/javascript" src="./js/zepto.min.js"></script>
+	<script type="text/javascript" src="./js/util.js"></script>
+	<script type="text/javascript">
+		Zepto(function($){
+			var nav = $('.nav');
+			var throttleFunc = throttle(function(){
+				var top = $('body').scrollTop();
+				if (top > 10) {
+					nav.addClass('nav-fixed');
+				} else {
+					nav.removeClass('nav-fixed');
+				}
+			}, 200);
+  			$(document).on('scroll', throttleFunc);
+		});
+	</script>
+</body>
+</html>
